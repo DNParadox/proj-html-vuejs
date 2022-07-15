@@ -5,24 +5,24 @@
 
                 <div class="row align-items-center">
 
-                    <div class="col-4 offset-2"> Open Hours: Mon-Sat - 9:00 - 18:00</div>
+                    <div class="col-4 offset-2"> <i class="fa-solid fa-clock"></i>  {{ dataHeader.hours }}</div>
                     <div class="col">
-                        <div class="telnumb">+1 (222) 222 333 4444</div>
+                        <div class="telnumb"> <i class="fa-solid fa-phone"></i> {{ dataHeader.telephone }}</div>
                     </div>
-                    <div class="col"> m96francesco@gmail.com</div>
+                    <div class="col"> <i class="fa-solid fa-envelope"></i> {{ dataHeader.mail }}</div>
                     <div class="col-2">
                         <!-- Promemoria: Dovrai eseguire ciclo for per ottenere le icone -->
                         <div class="iconbox d-flex">
                             <div class="icon">
-                                icon
+                                <i class="fa-brands fa-facebook-f"></i>
                             </div>
 
                             <div class="icon">
-                                icon
+                              <i class="fa-brands fa-twitter"></i>
                             </div>
 
                             <div class="icon">
-                                icon
+                                <i class="fa-brands fa-linkedin-in"></i>
                             </div>
                         </div>
                     </div>
@@ -33,21 +33,40 @@
 
         <div class="header-bottom">
             <div class="header-shade">
+                <!-- Top Side -->
                 <div class="container">
-                    <div class="row">
+                    <div class="top">
+                        <div class="row d-flex">
                         <div class="col-3 offset-2">
                             <div class="mylogo">
                                 <span class="halflogo">NEX</span>GEN </div>
                             </div>
-                        <div class="col"> <a href="#"> Test</a> </div>
-                        <div class="col">test</div>
+                        <div class="col"> <a href="#" > Test</a> </div>
                         <div class="col">test</div>
                         <div class="col">test</div>
                         <div class="col">test</div>
                         <div class="col">test</div>
                         <div class="col">test</div>
                     </div>
+                    </div>
+                    <!-- Center side  -->
+                    <div class="bottom d-flex justify-content-center"> 
+                        <div class="row ">
+                            <div class="col"> 
+                              <div class="title"> LEAD &#126; <span class="halftitle"> Customer</span></div>
+                            
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                  <div class="subtext">Lorem ipsum d molestiae ratione asperiorpisci impedit dos aut? Error, debitis veniam!</div>
+
+                            </div>
+                        </div>
+                     </div>
                 </div>
+
+               
             </div>
 
         </div>
@@ -56,22 +75,30 @@
 
 
 <script>
+
 export default {
-    name: 'myHeader'
+    name: 'myHeader',
+    props: {
+        dataHeader: Object
+    }
+    
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+.top {
+    height: 40%;
+}
+.header-top {
+    .row {
+    height:100%;
+}
+}
 .container {
     height: 100%;
     width: 80%;
 }
-.header-bottom {
-    .row {
-    height: 100%;
-    padding-top: 1.2rem;
-    }
-}
+
 
 .icon {
     padding-inline: 0.2rem;
@@ -84,9 +111,12 @@ header {
 .header-bottom {
     background-image: url(../assets/images/hero-image.png);
     background-size: cover;
-    height: 500px;
+    height: 600px;
     background-position-x: center;
     background-position-y: bottom;
+    .row {
+    padding-top: 1.2rem;
+    }
 
     .header-shade {
         background-color: rgba(0, 0, 0, 0.7);
@@ -102,5 +132,24 @@ letter-spacing: 3px;
     background-color: rgba(3, 132, 131, 0.4);
     padding-left: 20px;
     }
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.subtext {
+    text-align: center;
+}
+
+.halftitle{
+    padding: 10px;
+    background-color: rgba(3, 132, 131, 0.2);
+}
+
+.bottom {
+    flex-direction: column;
 }
 </style>
