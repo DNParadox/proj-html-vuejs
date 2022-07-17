@@ -1,17 +1,25 @@
 <template>
   <div id="app">
     <MyHeader :dataHeader="this.dataHeader" />
+    <MyMain/>
+    <!-- <font-awesome-icon :icon="['fas', 'fa-user-group']"/> -->
+   
   </div>
 </template>
 
 <script>
-import MyHeader from './components/myHeader.vue'
+import MyHeader from './components/myHeader.vue';
+import MyMain from './components/myMain.vue';
+
 
 export default {
   name: 'App',
   components: {
-    MyHeader
-  },
+    MyHeader,
+    MyMain,
+ 
+    
+},
   data() {
     return {
       dataHeader: {
@@ -25,7 +33,6 @@ export default {
           twitter: '',
         },
         allNav: [
-
           {
             nav: 'HOME',
           },
@@ -41,12 +48,8 @@ export default {
           {
             nav: 'BLOG',
           },
-
         ],
         subtext: 'Successful strategies require data analysis, creativity and customer focus, taking advantage of the latest technologies to offer excellent services.'
-
-
-
       },
     }
   }
