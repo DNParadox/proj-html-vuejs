@@ -9,20 +9,17 @@
                     <div class="boxcard">
                         <!-- Carta generata -->
                         <div class="mycard">
-
+                            <!-- Icone generate -->
                             <div class="icons">
                                 <div class="icon">
                                     <font-awesome-icon :icon="['fas', element.icon]" />
                                 </div>
                             </div>
-
                             <h2> {{ element.title }}</h2>
                             <p>{{ element.text }}</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>

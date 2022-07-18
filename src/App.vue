@@ -26,12 +26,17 @@ export default {
         hours: 'Open Hours: Mon-Sat - 9:00 - 18:00',
         telephone: '+1 (305) 1234-5678',
         mail: 'hello@example.com',
-        // Icone non funzionante tramite props. Riprovare Lunedì, inserite staticamente
-        icon: {
-          facebook: '',
-          linkedin: '',
-          twitter: '',
-        },
+        icons: [
+          {
+            icon: "fa-facebook-f",
+          },
+          {
+            icon:"fa-twitter",
+          },
+          {
+            icon:"fa-linkedin-in",
+          },
+        ],
         allNav: [
           {
             nav: 'HOME',

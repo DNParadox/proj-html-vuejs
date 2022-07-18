@@ -1,36 +1,25 @@
 <template>
     <header>
+        <!-- Header Top side -->
         <div class="header-top">
             <div class="container">
-
                 <div class="row align-items-center">
-
                     <div class="col-5 offset-1"> <i class="fa-solid fa-clock"></i> {{ dataHeader.hours }}</div>
                     <div class="col">
                         <div class="telnumb"> <i class="fa-solid fa-phone"></i> {{ dataHeader.telephone }}</div>
                     </div>
                     <div class="col"> <i class="fa-solid fa-envelope"></i> {{ dataHeader.mail }}</div>
                     <div class="col-2">
-                        <!-- Promemoria: Dovrai eseguire ciclo for per ottenere le icone -->
                         <div class="iconbox d-flex">
-                            <div class="icon">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </div>
-
-                            <div class="icon">
-                                <i class="fa-brands fa-twitter"></i>
-                            </div>
-
-                            <div class="icon">
-                                <i class="fa-brands fa-linkedin-in"></i>
+                            <div class="icon" v-for="(element, index) in dataHeader.icons" :key="index">
+                                <font-awesome-icon :icon="['fa-brands', element.icon]" />
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
+        <!-- Header Bottom Side -->
         <div class="header-bottom">
             <div class="header-shade">
                 <!-- Top Side -->
@@ -45,37 +34,34 @@
                             <div class="col" v-for="(element, index) in dataHeader.allNav" :key="index">
                                 <a class="links" href="#"> {{ element.nav }}</a>
                             </div>
-
                         </div>
                     </div>
+
                     <!-- Center side  -->
                     <div class="bottom d-flex justify-content-center">
                         <div class="row ">
                             <div class="col">
                                 <div class="title"> LEAD &#126; <span class="halftitle"> Customer</span></div>
-
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
                                 <div class="subtext">{{ dataHeader.subtext }}</div>
-
                             </div>
                         </div>
+                        <!-- Bottom Side -->
                         <div class="row">
                             <div class="col">
                                 <div class="boxbutton subtext">
-                                    <div class="btn btn-outline-success mpdi ">   <a href="#">  Get in Touch</a></div>
-                                    <div class="btn btn-outline-success mpdi">   <a href="#">  Get in Touch</a></div>
+                                    <div class="btn btn-outline-success mpdi "> <a href="#"> Get in Touch</a></div>
+                                    <div class="btn btn-outline-success mpdi"> <a href="#"> Get in Touch</a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     </header>
 </template>
@@ -88,7 +74,6 @@ export default {
     props: {
         dataHeader: Object
     }
-
 }
 </script>
 
