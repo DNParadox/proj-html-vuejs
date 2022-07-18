@@ -2,6 +2,7 @@
     <main>
         <MyFirstSection :dataFirstSection="this.dataFirstSection" />
         <MySecondSection :dataSecondSection="this.dataSecondSection" />
+        <MyThirdComponent/>
     </main>
 </template>
 
@@ -9,13 +10,15 @@
 <script>
 import MyFirstSection from "./myFirstSection.vue";
 import MySecondSection from "./mySecondSection.vue";
+import MyThirdComponent from "./myThirdComponent.vue";
 
 export default {
     name: 'myMain',
     components: {
-        MyFirstSection,
-        MySecondSection
-    },
+    MyFirstSection,
+    MySecondSection,
+    MyThirdComponent
+},
     data() {
         return {
             dataFirstSection: {
