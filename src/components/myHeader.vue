@@ -91,15 +91,9 @@ export default {
 .container {
     width: 80%;
 }
-
-
 .icon {
     padding-inline: 0.6rem;
     font-size: 0.7rem;
-}
-
-header {
-    color: white
 }
 
 .header-bottom {
@@ -108,7 +102,6 @@ header {
     height: 600px;
     background-position-x: center;
     background-position-y: bottom;
-
     .row {
         padding-top: 1.2rem;
     }
