@@ -7,11 +7,26 @@
           <!-- Prima sezione -->
     <section class="thirdsection">
         <div class="container-fluid">
-            <div class="row offset-1">
+            <div class="row">
+                <div class="col pdbl">
+                    <div class="title">
+                        <h4 class="pco"> {{ dataThirdSection.minititle}} </h4>
+                        <h2> {{ dataThirdSection.title}} <span class="halftitle">{{ dataThirdSection.prefixtitle}}</span></h2>
+                    </div>
+
+                    <div class="d-flex">
+                        <p class="mywidth60 fsize"> {{dataThirdSection.text }}   </p>
+                        <div class="d-flex rightside">
+                             <button> {{ dataThirdSection.buttonText }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <!-- Colonna -->
 
 
-                <div class="col-3">
+                <div class="col-4" v-for="(element,index) in dataThirdSection.insideCard" :key="index">
                     <!-- Box di una Carta Generata -->
                     <div class="boxcard">
                         <!-- Carta generata -->
@@ -19,50 +34,18 @@
                             <!-- Icone generate -->
                             <div class="icons">
                                 <div class="icon">
-                                   icona
+                                    <span class="pdl"><font-awesome-icon  class="pco" :icon="[element.prefixIcon, element.icon]"/></span>
+
                                 </div>
                             </div>
-                            <h2> eee</h2>
-                            <p>eee</p>
+                            <h2> {{ element.title }}</h2>
+                            <p class="fsize">{{ element.text }}</p>
+                            <button> {{ dataThirdSection.ButtonText2 }}</button>
                         </div>
                     </div>
                 </div>
 
-                     <div class="col-3">
-                    <!-- Box di una Carta Generata -->
-                    <div class="boxcard">
-                        <!-- Carta generata -->
-                        <div class="mycard">
-                            <!-- Icone generate -->
-                            <div class="icons">
-                                <div class="icon">
-                                   icona
-                                </div>
-                            </div>
-                            <h2> eee</h2>
-                            <p>eee</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                     <div class="col-3">
-                    <!-- Box di una Carta Generata -->
-                    <div class="boxcard">
-                        <!-- Carta generata -->
-                        <div class="card">
-                            <!-- Icone generate -->
-                            <div class="icons">
-                                <div class="icon">
-                                   icona
-                                </div>
-                            </div>
-                            <h2> titolo </h2>
-                            <p> contenuto</p>
-                            <button>bottone</button>
-                        </div>
-                    </div>
-                </div>
+        
 
 
             </div>
@@ -72,13 +55,23 @@
 
 <script>
 export default { 
-    name: 'myThirdComponent'
+    name: 'myThirdComponent',
+    props: {
+        dataThirdSection: Object
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+
+.pdbl {
+    padding-block: 30px;
+}
+.container-fluid{
+    width: 80%;
+}
 .thirdsection{
-    background-color: lightcoral;
+    background-color: #121117
 }
 
 .row {
@@ -95,19 +88,49 @@ export default {
     height: 100%;
 
       .mycard {
-        background-color: white;
+        margin-block: 30px;
+        background-color: #1e2223;
         padding-block: 60px;
         padding-inline: 40px;
         border-radius: 10px 10px 10px 10px;
+        h2{
+            color:white;
+        }
     }
 }
 
 .icons {
-    padding: 10px;
-    background-color: #daeced;
     width: 14%;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
+}
+
+.mywidth60{
+    width: 66%;
+}
+
+.rightside{
+    width: 36%;
+    display: flex;  
+    justify-content: flex-end;
+
+}
+
+.title{
+    color:white;
+    h4{
+    color: rgba(3, 132, 131);
+    font-size: 0.8rem;
+    }
+}
+
+.pco {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.fsize{
+    font-size: 1rem;
+    color: #a2adae;
 }
 </style>

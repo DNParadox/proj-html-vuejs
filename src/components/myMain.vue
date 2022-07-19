@@ -2,7 +2,7 @@
     <main>
         <MyFirstSection :dataFirstSection="this.dataFirstSection" />
         <MySecondSection :dataSecondSection="this.dataSecondSection" />
-        <MyThirdComponent/>
+        <MyThirdComponent :dataThirdSection="this.dataThirdSection" />
     </main>
 </template>
 
@@ -15,10 +15,10 @@ import MyThirdComponent from "./myThirdComponent.vue";
 export default {
     name: 'myMain',
     components: {
-    MyFirstSection,
-    MySecondSection,
-    MyThirdComponent
-},
+        MyFirstSection,
+        MySecondSection,
+        MyThirdComponent
+    },
     data() {
         return {
             dataFirstSection: {
@@ -71,6 +71,53 @@ export default {
                         prefixIcon: 'fas',
                         icon: 'fa-helmet-safety',
                         title: 'Expertise',
+                        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. '
+                    },
+                ]
+            },
+            dataThirdSection: {
+                icon: ' ',
+                minititle: 'OUR BUSINESS AREAS',
+                title: 'Excellence in ',
+                prefixtitle: 'Services',
+                buttonText: 'SEE ALL',
+                ButtonText2: 'READ MORE',
+                text: 'We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire', 
+                insideCard: [
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-helmet-safety',
+                        title: 'Audit & Assurance',
+                        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. '
+                    },
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-suitcase',
+                        title: 'Financial Advisory',
+                        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. '
+                    },
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-chart-simple',
+                        title: 'Analytics and M&A',
+                        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. '
+                    },
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-plane-departure',
+                        title: 'Middle Marketing',
+                        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. '
+                    },
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-earth-europe',
+                        title: 'Legal Consulting',
+                        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. '
+                    },
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-inbox',
+                        title: 'Regulatory Risk',
                         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. '
                     },
                 ]

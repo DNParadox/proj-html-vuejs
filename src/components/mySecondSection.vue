@@ -16,7 +16,7 @@
                             <div class="insidecard-bot">
 
                                 <div class="secarg" v-for="(element,index) in dataSecondSection.insideCard" :key="index">
-                                    <span class="pdl"><font-awesome-icon  class="test" :icon="[element.prefixIcon, element.icon]"/></span>
+                                    <span class="pdl"><font-awesome-icon  class="pco" :icon="[element.prefixIcon, element.icon]"/></span>
                                     <h5 class="title">{{ element.title }}</h5> 
                                     <p class="text">{{ element.text }}</p>
                                 </div>
@@ -56,7 +56,7 @@ export default {
     img {
         width: 100%;  
         height: 600px;
-        object-fit: contain;
+        object-fit: cover;
         object-position: right;
     }
 }
@@ -106,7 +106,5 @@ export default {
 .pdl {
     padding-inline: 5px;
 }
-.test {
-   color: rgba(3, 132, 131);
-}
+
 </style>
