@@ -8,7 +8,6 @@
                         <h4 class="pco"> {{ dataFourthSection.minititle}} </h4>
                         <h2><span class="halftitle pco">{{ dataFourthSection.prefixtitle}}</span> {{ dataFourthSection.title}} </h2>
                     </div>
-
                     <div class="d-flex justify-content-center">
                         <p class="fsize"> {{dataFourthSection.text }}   </p>
                     </div>
@@ -16,8 +15,6 @@
             </div>
             <div class="row">
                 <!-- Colonna -->
-
-
                 <div class="col-4" v-for="(element,index) in dataFourthSection.insideCard" :key="index">
                     <!-- Box di una Carta Generata -->
                     <div class="boxcard">
@@ -34,20 +31,13 @@
                                 <div class="price">
                                     <span>{{ element.dollar }}</span> <span class="pco"> {{ element.price}}</span> <span> {{ element.monthly}}</span>
                                 </div>
-                            </div>
-                         
+                            </div>                   
                             <ul >
                                 <li class="d-flex" v-for="(insideEl,index ) in element.text" :key="index"> <span class="lwidth">{{ insideEl.li}} </span><span class="pdl rwidth"><font-awesome-icon  class="pco" :icon="[insideEl.prefixIcon, insideEl.icon]"/></span></li>
                             </ul>
-                    
-                           
                         </div>
                     </div>
                 </div>
-
-        
-
-
             </div>
         </div>
     </section>
@@ -76,7 +66,6 @@ export default {
     background-color: #e3e7df;
     padding-block: 80px;
 }
-
 .row {
     height: 100%;
 }
@@ -87,7 +76,6 @@ export default {
 
 .boxcard {
     height: 100%;
-
       .mycard {
         margin-block: 30px;
         background-color: white;
@@ -120,8 +108,6 @@ export default {
     font-size: 3rem;
     color: black;
     }
-
-
     h4{
     color: rgba(3, 132, 131);
     font-size: 0.8rem;

@@ -4,6 +4,7 @@
         <MySecondSection :dataSecondSection="this.dataSecondSection" />
         <MyThirdComponent :dataThirdSection="this.dataThirdSection" />
         <MyFourthSection :dataFourthSection="this.dataFourthSection" />
+        <myFifthSection :dataQuintaSection="this.dataQuintaSection" />
     </main>
 </template>
 
@@ -13,15 +14,17 @@ import MyFirstSection from "./myFirstSection.vue";
 import MySecondSection from "./mySecondSection.vue";
 import MyThirdComponent from "./myThirdComponent.vue";
 import MyFourthSection from "./myFourthSection.vue";
+import myFifthSection from "./myFifthSection.vue";
 
 export default {
     name: 'myMain',
     components: {
-        MyFirstSection,
-        MySecondSection,
-        MyThirdComponent,
-        MyFourthSection
-    },
+    MyFirstSection,
+    MySecondSection,
+    MyThirdComponent,
+    MyFourthSection,
+    myFifthSection
+},
     data() {
         return {
             dataFirstSection: {
@@ -236,11 +239,35 @@ export default {
                                 icon: 'fa-check',
                             }
                         ],
-                    },
-
+                    }
                 ],
+            },
+            dataQuintaSection: {
+            minititle: 'OUR EDITIORIAL CONTENT',
+            title: 'Latest',
+            prefixtitle: 'News',
+            text: 'Every week we publish content about what is best in the business world.',
+            buttonText: 'SEE ALL',
+            
+            allText: [
+                {
+                    alt: 'Una disegnatrice',
+                    img: require('../assets/images/news-1.jpg'),
+                    text: 'Increasing creativity is possibile for everyone'
+                },
+                {
+                    alt: 'palese ad delle Airpods',
+                    img: require('../assets/images/news-2.jpg'),
+                    text: 'Because market research is part of the business plan'
+                },
+                {
+                    alt: 'Smart Working',
+                    img: require('../assets/images/news-3.jpg'),
+                    text: 'Working from home is now a trend'
+                },
 
-            }
+            ]
+        }
         }
     }
 }

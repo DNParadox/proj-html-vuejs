@@ -1,5 +1,5 @@
 <template>
-          <!-- Quarta sezione -->
+          <!-- Terza sezione -->
     <section class="thirdsection">
         <div class="container-fluid">
             <div class="row">
