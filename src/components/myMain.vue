@@ -5,6 +5,8 @@
         <MyThirdComponent :dataThirdSection="this.dataThirdSection" />
         <MyFourthSection :dataFourthSection="this.dataFourthSection" />
         <myFifthSection :dataQuintaSection="this.dataQuintaSection" />
+        <MySestaSection :dataSestaSection="this.dataSestaSection"/>
+        <MySettimaSection :dataSettimaSection="this.dataSettimaSection"/>
     </main>
 </template>
 
@@ -15,6 +17,8 @@ import MySecondSection from "./mySecondSection.vue";
 import MyThirdComponent from "./myThirdComponent.vue";
 import MyFourthSection from "./myFourthSection.vue";
 import myFifthSection from "./myFifthSection.vue";
+import MySestaSection from "./mySestaSection.vue";
+import MySettimaSection from "./mySettimaSection.vue";
 
 export default {
     name: 'myMain',
@@ -23,7 +27,9 @@ export default {
     MySecondSection,
     MyThirdComponent,
     MyFourthSection,
-    myFifthSection
+    myFifthSection,
+    MySestaSection,
+    MySettimaSection
 },
     data() {
         return {
@@ -265,7 +271,41 @@ export default {
                     img: require('../assets/images/news-3.jpg'),
                     text: 'Working from home is now a trend'
                 },
-
+            ]
+        },
+        dataSestaSection: {
+            minititle: 'NEWSLETTER',
+            prefixTitle: 'Know',
+            title: ' First',
+            text: 'Follow closely and receive content about our company and the news of the current market',
+            button: 'SUBSCRIBE'
+        },
+        dataSettimaSection:{
+            minititle: 'SEND A MESSAGE',
+            prefixTitle: 'Touch',
+            title: ' Get in ',
+            text: 'We will  respond to your message as soon as possible.',
+            button: 'SEND',
+            title2: 'Example Inc.',
+            text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text3: 'Praesent diam Iacus, dapibus sed imperdiet consectetur',
+            button2: 'VIEW MAP',
+            AllRight: [
+                {   
+                    prefix: 'fas',
+                    icon: 'fa-phone',
+                    text: '+1 (305) 1234-5678'
+                },
+                {   
+                    prefix: 'fas',
+                    icon: 'fa-envelope',
+                    text: 'hello@example.com'
+                },
+                {   
+                    prefix: 'fas',
+                    icon: 'fa-location-dot',
+                    text: 'Main Avenue, 987'
+                },
             ]
         }
         }

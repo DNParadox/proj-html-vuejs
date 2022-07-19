@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <MyHeader :dataHeader="this.dataHeader" />
-    <MyMain/>
-    <!-- <font-awesome-icon :icon="['fas', 'fa-user-group']"/> -->
-   
+    <MyMain/>   
   </div>
 </template>
 

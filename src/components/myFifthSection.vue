@@ -87,6 +87,7 @@ export default {
         img {
             width: 100%;
             display: block;
+            border-radius: 13px 13px 13px 13px;
         }
 
         p {
@@ -143,6 +144,7 @@ export default {
     top: 0%;
     left: 0%;
     background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 13px 13px 13px 13px;
 }
 
 h2{

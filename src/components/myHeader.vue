@@ -54,8 +54,8 @@
                         <div class="row">
                             <div class="col">
                                 <div class="boxbutton subtext">
-                                    <div class="btn btn-outline-success mpdi "> <a href="#"> Get in Touch</a></div>
-                                    <div class="btn btn-outline-success mpdi"> <a href="#"> Get in Touch</a></div>
+                                    <button class="  mpdi "> <a href="#"> Get in Touch</a></button>
+                                    <button class=" mpdi"> <a href="#"> Get in Touch</a></button>
                                 </div>
                             </div>
                         </div>

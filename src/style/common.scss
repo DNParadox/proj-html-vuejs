@@ -34,3 +34,22 @@ header{
 ul {
     list-style-type: none;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    background-color: transparent;
+    border: 1px solid rgb(3, 132, 131);
+    color: rgb(3, 132, 131);
+    padding-block: 10px;
+    padding-inline: 15px;
+    border-radius: 6px;
+}
+
+button:hover{
+    background-color: #058283;
+    color: white;
+}
