@@ -3,6 +3,7 @@
         <MyFirstSection :dataFirstSection="this.dataFirstSection" />
         <MySecondSection :dataSecondSection="this.dataSecondSection" />
         <MyThirdComponent :dataThirdSection="this.dataThirdSection" />
+        <MyFourthSection :dataFourthSection="this.dataFourthSection" />
     </main>
 </template>
 
@@ -11,13 +12,15 @@
 import MyFirstSection from "./myFirstSection.vue";
 import MySecondSection from "./mySecondSection.vue";
 import MyThirdComponent from "./myThirdComponent.vue";
+import MyFourthSection from "./myFourthSection.vue";
 
 export default {
     name: 'myMain',
     components: {
         MyFirstSection,
         MySecondSection,
-        MyThirdComponent
+        MyThirdComponent,
+        MyFourthSection
     },
     data() {
         return {
@@ -76,13 +79,12 @@ export default {
                 ]
             },
             dataThirdSection: {
-                icon: ' ',
                 minititle: 'OUR BUSINESS AREAS',
                 title: 'Excellence in ',
                 prefixtitle: 'Services',
                 buttonText: 'SEE ALL',
                 ButtonText2: 'READ MORE',
-                text: 'We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire', 
+                text: 'We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire',
                 insideCard: [
                     {
                         prefixIcon: 'fas',
@@ -121,6 +123,123 @@ export default {
                         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. '
                     },
                 ]
+            },
+            dataFourthSection: {
+                minititle: 'MONTLY PLANS',
+                title: 'Table',
+                prefixtitle: 'Pricing ',
+                buttonText: 'SEE ALL',
+                ButtonText2: 'READ MORE',
+                text: 'We can help you deliver and execute your future, wherever you compete, using the latest technologies, from strategy development to implementation.',
+                insideCard: [
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-rocket',
+                        title: 'Standard',
+                        price: '490',
+                        dollar: '$',
+                        monthly: '/mo ',
+                        text: [
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Standard Accounting',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Platform Access',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Business Orientation',
+                                icon: 'fa-x',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Dedicated Consultant',
+                                icon: 'fa-x',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Personal Assistance',
+                                icon: 'fa-x',
+                            }
+                        ],
+                    },
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-suitcase',
+                        price: '890',
+                        dollar: '$',
+                        monthly: '/mo ',
+                        title: 'Professional',
+                        text: [
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Standard Accounting',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Platform Access',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Business Orientation',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Dedicated Consultant',
+                                icon: 'fa-x',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Personal Assistance',
+                                icon: 'fa-x',
+                            }
+                        ],
+                    },
+                    {
+                        prefixIcon: 'fas',
+                        icon: 'fa-gem',
+                        price: '1390',
+                        dollar: '$',
+                        monthly: '/mo ',
+                        title: 'Ultimate',
+                        text: [
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Standard Accounting',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Platform Access',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Business Orientation',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Dedicated Consultant',
+                                icon: 'fa-check',
+                            },
+                            {
+                                prefixIcon: 'fas',
+                                li: 'Personal Assistance',
+                                icon: 'fa-check',
+                            }
+                        ],
+                    },
+
+                ],
+
             }
         }
     }

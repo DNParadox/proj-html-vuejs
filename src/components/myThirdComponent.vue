@@ -1,10 +1,5 @@
-<!-- Not per dopo: 
-    Stringere width per comparare con altre sezioni , succesivamente mettere una row superiore
-     dove aggiungere testo da stampare
- -->
-
 <template>
-          <!-- Prima sezione -->
+          <!-- Quarta sezione -->
     <section class="thirdsection">
         <div class="container-fluid">
             <div class="row">
@@ -71,7 +66,8 @@ export default {
     width: 80%;
 }
 .thirdsection{
-    background-color: #121117
+    background-color: #121117;
+    padding-block: 80px;
 }
 
 .row {
