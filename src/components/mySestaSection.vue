@@ -14,12 +14,10 @@
                         <input type="text" placeholder="Name">
                         <input type="mail" placeholder="Email">
                         <button> {{dataSestaSection.button}}</button>
-
                       </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 </template>
